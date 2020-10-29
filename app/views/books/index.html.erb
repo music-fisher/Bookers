@@ -1,20 +1,22 @@
 <h1>Books</h1>
-<% @books.each do |book| %>
+
 <table>
     <tr>
         <th>Title</th>
         <th>Body</th>
         <th></th>
     </tr>
+<% @books.each do |book| %>
   <tbody>
       <td><%= book.title %> </td>
       <td><%= book.body %></td>
-      <td><%= link_to 'Show',book_path(@book) %></td>
-      <td><%= link_to 'Edit',edit_book_path %></td>
-      <td><%= link_to 'Destroy',book_path(@book),method: :delete,"data-confirm" => "Are You Sure?" %></td>
+      <td><%= link_to 'Show',book_path(book) %></td>
+      <td><%= link_to 'Edit',edit_book_path(book) %></td>
+      <td><%= link_to 'Destroy',book_path(book),method: :delete,"data-confirm" => "Are You Sure?" %></td>
   </tbody>
-</table>
 <% end %>
+</table>
+
 
 <!--投稿部分-->
 <h2>New book</h2>
