@@ -1,5 +1,6 @@
+
 <h1>Editing Book</h1>
-<%= form_with model:@book,url:"/books/236411/edit",local:true do |f| %>
+<%= form_with model:@book,local:true do |f| %>
  <div class= "field">
  <%= f.label:title,'Title' %>
  <%= f.text_field :title %>
